@@ -76,13 +76,10 @@ public class MainActivity2 extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-/*
-        if (id == R.id.action_item) {
-            // Realiza alguna acción cuando se selecciona la opción de menú
-            return true;
-        }
-*/
-        return super.onOptionsItemSelected(item);
+        Intent intent = new Intent(this, plantillausuari.class);
+        startActivity(intent);
+
+        return true;
     }
     @Override
     public boolean onSupportNavigateUp() {
