@@ -22,7 +22,5 @@ public class MainActivity extends AppCompatActivity {
         EditText etext = (EditText) findViewById(R.id.editTextTextPersonName);
         intent.putExtra("usuari", etext.getText().toString());
         startActivity(intent);
-
-
     }
 }
