@@ -5,6 +5,4 @@
         android:icon="@drawable/logomenu"
         android:title="@string/menu"
         app:showAsAction="ifRoom" />
-
-
 </menu>

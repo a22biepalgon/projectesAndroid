@@ -27,6 +27,7 @@ public class MainActivity2 extends AppCompatActivity {
 
     private AppBarConfiguration appBarConfiguration;
     private ActivityMain2Binding binding;
+    String value = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +49,7 @@ public class MainActivity2 extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-        String value = getIntent().getExtras().getString("usuari");
+        value = getIntent().getExtras().getString("usuari");
         TextView text = (TextView) findViewById(R.id.textview_first);
         text.setText("HOLA " + value);
 
@@ -75,8 +76,9 @@ public class MainActivity2 extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
         Intent intent = new Intent(this, plantillausuari.class);
+        intent.putExtra("usuari", value);
+
         startActivity(intent);
 
         return true;
